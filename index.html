@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex,nofollow" />
+  <title>AMIL — Diagnóstico SEO & GEO</title>
+  <meta name="description" content="Diagnóstico executivo de presença digital, SEO, SEO Local e GEO para AMIL Goiânia e AMIL Ambiental." />
+  <style>
+    :root{
+      --bg:#06110e;
+      --bg2:#0b1b17;
+      --card:rgba(255,255,255,.055);
+      --line:rgba(255,255,255,.10);
+      --text:#f4f8f6;
+      --muted:#a9bbb4;
+      --green:#39e58c;
+      --green2:#15b86a;
+      --yellow:#f6c85f;
+      --red:#ff7f7f;
+      --shadow:0 28px 80px rgba(0,0,0,.34);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      color:var(--text);
+      background:
+        radial-gradient(circle at 15% 15%, rgba(57,229,140,.12), transparent 32%),
+        radial-gradient(circle at 85% 10%, rgba(57,229,140,.08), transparent 28%),
+        linear-gradient(180deg,var(--bg),#081712 40%,#05100d);
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      line-height:1.55;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
+    .nav{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(18px);
+      background:rgba(6,17,14,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:800;letter-spacing:.08em;font-size:14px}
+    .badge{padding:8px 12px;border:1px solid rgba(57,229,140,.25);border-radius:999px;color:#caffdf;background:rgba(57,229,140,.08);font-size:12px}
+    .nav-actions{display:flex;align-items:center;gap:10px}
+    .pdf-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:var(--green);color:#062014;font-size:12px;font-weight:850;box-shadow:0 8px 26px rgba(57,229,140,.16)}
+    .pdf-btn:hover{transform:translateY(-1px)}
+    .hero{padding:86px 0 48px}
+    .eyebrow{color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.13em;font-size:12px}
+    h1{font-size:clamp(44px,7vw,92px);line-height:.95;margin:18px 0 24px;letter-spacing:-.055em;max-width:980px}
+    .lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted);max-width:850px}
+    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;margin-top:50px}
+    .panel,.card{
+      border:1px solid var(--line);background:var(--card);border-radius:26px;box-shadow:var(--shadow)
+    }
+    .panel{padding:30px}
+    .domains{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .domain{padding:20px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .domain strong{display:block;font-size:18px;margin-bottom:5px}
+    .domain span{color:var(--muted);font-size:14px}
+    .statbig{font-size:54px;font-weight:800;letter-spacing:-.06em}
+    .muted{color:var(--muted)}
+    section{padding:72px 0}
+    h2{font-size:clamp(34px,4vw,54px);line-height:1.03;letter-spacing:-.04em;margin:0 0 18px}
+    .section-copy{max-width:760px;color:var(--muted);font-size:18px}
+    .scores{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+    .score{padding:22px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .score-top{display:flex;justify-content:space-between;gap:20px;align-items:center}
+    .score-name{font-weight:700}
+    .score-val{font-size:28px;font-weight:800}
+    .bar{height:8px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden;margin:18px 0 12px}
+    .bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--green2),var(--green));border-radius:20px}
+    .score small{color:var(--muted)}
+    .issues{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
+    .issue{padding:26px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:22px}
+    .issue .num{font-size:12px;color:var(--green);font-weight:800;letter-spacing:.12em}
+    .issue h3{margin:10px 0 8px;font-size:22px}
+    .issue p{margin:0;color:var(--muted)}
+    .impact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+    .impact .card{padding:28px}
+    .impact strong{font-size:20px}
+    .pill{display:inline-flex;margin-top:14px;padding:7px 10px;border-radius:999px;font-size:12px;background:rgba(246,200,95,.1);color:#ffe19b;border:1px solid rgba(246,200,95,.2)}
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:38px;align-items:center}
+    .flow div{min-height:120px;padding:22px;border-radius:20px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,.035);font-weight:800}
+    .flow div:not(:last-child)::after{content:"→";position:absolute}
+    .positioning{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+    .positioning .card{padding:30px}
+    .positioning h3{font-size:28px;margin:0 0 8px}
+    .positioning ul{padding-left:18px;color:var(--muted);margin:18px 0 0}
+    .proposal{
+      padding:40px;
+      background:linear-gradient(145deg,rgba(57,229,140,.12),rgba(255,255,255,.04));
+      border:1px solid rgba(57,229,140,.22);
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+    .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+    .price{padding:28px;border-radius:24px;border:1px solid var(--line);background:rgba(0,0,0,.16)}
+    .price label{display:block;color:var(--muted);font-size:14px;margin-bottom:8px}
+    .price strong{display:block;font-size:46px;letter-spacing:-.05em}
+    .price span{color:var(--muted)}
+    .note{margin-top:24px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted)}
+    .cta{display:inline-flex;margin-top:28px;padding:15px 22px;border-radius:14px;background:var(--green);color:#062014;font-weight:850;box-shadow:0 10px 35px rgba(57,229,140,.18)}
+    footer{padding:40px 0 70px;color:#789087;font-size:13px}
+    .kicker{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+    .kicker span{padding:8px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    @media(max-width:900px){
+      .hero-grid,.scores,.issues,.impact,.positioning,.price-grid{grid-template-columns:1fr 1fr}
+      .flow{grid-template-columns:1fr}
+    }
+    @media print{.nav{display:none}.cta,.pdf-btn{display:none!important}section{break-inside:avoid}.hero{padding-top:34px}body{background:#06110e!important}}
+    @media(max-width:640px){
+      .wrap{width:min(100% - 24px,1180px)}
+      .navin{height:62px}
+      .hero{padding-top:58px}
+      .hero-grid,.domains,.scores,.issues,.impact,.positioning,.price-grid{grid-template-columns:1fr}
+      .panel{padding:22px}
+      .proposal{padding:24px}
+      .price strong{font-size:38px}
+    }
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="wrap navin">
+      <div class="brand">DIAGNÓSTICO DIGITAL · AMIL</div>
+      <div class="nav-actions"><div class="badge">SEO + GEO · 2026</div><a class="pdf-btn" href="amil-diagnostico-seo-geo.pdf" download aria-label="Baixar diagnóstico em PDF">↓ Baixar PDF</a></div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="eyebrow">Diagnóstico executivo</div>
+        <h1>Visibilidade orgânica, presença local e posicionamento em mecanismos de IA.</h1>
+        <p class="lead">Análise resumida de oportunidades e lacunas digitais identificadas nos domínios AMIL Goiânia e AMIL Ambiental, com foco em busca, descoberta local e presença em novas experiências de pesquisa com inteligência artificial.</p>
+
+        <div class="hero-grid">
+          <div class="panel">
+            <div class="domains">
+              <div class="domain"><strong>amilgoiania.com.br</strong><span>Foco local, serviços e intenção comercial.</span></div>
+              <div class="domain"><strong>amilambiental.com.br</strong><span>Foco institucional, ambiental e corporativo.</span></div>
+            </div>
+            <div class="kicker">
+              <span>SEO Técnico</span><span>SEO Local</span><span>Conteúdo</span><span>GEO / IA</span><span>Autoridade Digital</span>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="muted">Potencial identificado</div>
+            <div class="statbig">ALTO</div>
+            <p class="muted">Os dois domínios apresentam oportunidades relevantes de ganho de visibilidade e fortalecimento de posicionamento.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Leitura executiva</div>
+        <h2>Onde estão hoje as principais lacunas.</h2>
+        <p class="section-copy">Os indicadores abaixo representam um índice visual do diagnóstico, criado para comunicar maturidade e oportunidade. Não são métricas oficiais do Google.</p>
+
+        <div class="scores">
+          <div class="score">
+            <div class="score-top"><span class="score-name">SEO Técnico</span><span class="score-val">58%</span></div>
+            <div class="bar"><i style="--w:58%"></i></div><small>Há elementos essenciais que precisam de revisão e consolidação.</small>
+          </div>
+          <div class="score">
+            <div class="score-top"><span class="score-name">SEO Local</span><span class="score-val">72%</span></div>
+            <div class="bar"><i style="--w:72%"></i></div><small>Existe boa base local, porém ainda com espaço relevante de expansão.</small>
+          </div>
+          <div class="score">
+            <div class="score-top"><span class="score-name">Conteúdo</span><span class="score-val">54%</span></div>
+            <div class="bar"><i style="--w:54%"></i></div><small>A estrutura atual ainda não explora todo o potencial de intenção de busca.</small>
+          </div>
+          <div class="score">
+            <div class="score-top"><span class="score-name">GEO / IA</span><span class="score-val">39%</span></div>
+            <div class="bar"><i style="--w:39%"></i></div><small>A presença para mecanismos generativos ainda é pouco estruturada.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Diagnóstico resumido</div>
+        <h2>O que ainda não está suficientemente estruturado.</h2>
+        <div class="issues">
+          <div class="issue"><div class="num">01</div><h3>Indexação e rastreabilidade</h3><p>Existem pontos técnicos e URLs que requerem revisão para garantir que os motores de busca encontrem, interpretem e priorizem corretamente as páginas relevantes.</p></div>
+          <div class="issue"><div class="num">02</div><h3>Arquitetura de conteúdo</h3><p>A estrutura atual não cobre de forma ampla todas as intenções de busca ligadas a serviços, localização, problemas e soluções procuradas pelos usuários.</p></div>
+          <div class="issue"><div class="num">03</div><h3>Metadados e sinais semânticos</h3><p>Há necessidade de padronização e validação de informações utilizadas por buscadores, redes sociais e sistemas de interpretação semântica.</p></div>
+          <div class="issue"><div class="num">04</div><h3>SEO Local</h3><p>A presença local é um ativo forte, mas ainda pode ser mais bem conectada ao site, à marca e às regiões efetivamente atendidas.</p></div>
+          <div class="issue"><div class="num">05</div><h3>Consistência da entidade AMIL</h3><p>Informações corporativas e sinais digitais precisam estar mais consistentes entre propriedades, canais e domínios para reduzir ambiguidade.</p></div>
+          <div class="issue"><div class="num">06</div><h3>GEO e mecanismos de IA</h3><p>Os sites ainda não apresentam uma estrutura suficientemente forte para maximizar compreensão, citação e recomendação por experiências de busca com IA.</p></div>
+          <div class="issue"><div class="num">07</div><h3>Autoridade e confiança</h3><p>Existe espaço para reforçar sinais de experiência, legitimidade, relevância e confiança da marca nos ambientes de busca.</p></div>
+          <div class="issue"><div class="num">08</div><h3>Separação estratégica dos domínios</h3><p>Os dois sites precisam assumir papéis claros para evitar sobreposição e transformar a presença digital em ativos complementares, e não concorrentes.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Impacto</div>
+        <h2>O problema não é apenas “aparecer no Google”.</h2>
+        <p class="section-copy">A busca está fragmentada entre mecanismos tradicionais, mapas, avaliações, assistentes e respostas geradas por inteligência artificial.</p>
+        <div class="impact">
+          <div class="card"><strong>Menor cobertura de buscas</strong><p class="muted">O site deixa de disputar consultas comerciais e informacionais com potencial de geração de demanda.</p><span class="pill">Perda de oportunidade</span></div>
+          <div class="card"><strong>Menor clareza para algoritmos</strong><p class="muted">Quando a entidade, serviços e áreas de atuação não estão estruturados de forma consistente, a compreensão algorítmica fica limitada.</p><span class="pill">Baixa interpretação</span></div>
+          <div class="card"><strong>Dependência maior de mídia paga</strong><p class="muted">Sem fortalecimento orgânico contínuo, a aquisição tende a depender mais de investimento recorrente em anúncios.</p><span class="pill">Maior CAC potencial</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Nova jornada de descoberta</div>
+        <h2>A marca precisa ser encontrada em diferentes superfícies.</h2>
+        <div class="flow">
+          <div>Google</div><div>Google Maps</div><div>Buscas locais</div><div>Assistentes de IA</div><div>Leads qualificados</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Direcionamento estratégico</div>
+        <h2>Dois domínios. Dois papéis claros.</h2>
+        <div class="positioning">
+          <div class="card">
+            <h3>AMIL Goiânia</h3>
+            <p class="muted">Vocação para intenção local, atendimento, serviços e pesquisas comerciais de alta urgência.</p>
+            <ul><li>Busca local</li><li>Serviços</li><li>Regiões atendidas</li><li>Conversão</li></ul>
+          </div>
+          <div class="card">
+            <h3>AMIL Ambiental</h3>
+            <p class="muted">Vocação institucional, ambiental, industrial e corporativa, com foco em autoridade temática e presença B2B.</p>
+            <ul><li>Autoridade</li><li>Soluções ambientais</li><li>Mercado corporativo</li><li>Relevância técnica</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="proposta">
+      <div class="wrap">
+        <div class="proposal">
+          <div class="eyebrow">Proposta comercial</div>
+          <h2>Assumir a evolução de SEO + GEO dos dois domínios.</h2>
+          <p class="section-copy">Projeto voltado à estruturação inicial, gestão contínua, acompanhamento de desempenho e evolução do posicionamento orgânico da marca.</p>
+
+          <div class="price-grid">
+            <div class="price"><label>Implementação inicial</label><strong>R$ 4.500</strong><span>Projeto para os dois domínios</span></div>
+            <div class="price"><label>Gestão mensal</label><strong>R$ 1.500</strong><span>Acompanhamento e evolução contínua</span></div>
+          </div>
+
+          <div class="note">
+            O detalhamento técnico da metodologia, arquitetura de implementação, estratégia de palavras-chave, prioridades operacionais e plano de execução é desenvolvido após a contratação e integra a propriedade intelectual do projeto. SEO é um processo de evolução contínua e não permite garantia de posição específica em mecanismos de busca.
+          </div>
+
+          <a class="cta" href="amil-diagnostico-seo-geo.pdf" download>Baixar proposta em PDF</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">Diagnóstico executivo de presença digital · AMIL · SEO + GEO · 2026</div>
+  </footer>
+</body>
+</html>

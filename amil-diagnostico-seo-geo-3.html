@@ -6,125 +6,199 @@
   <meta name="robots" content="noindex,nofollow" />
   <title>AMIL — Diagnóstico SEO & GEO</title>
   <meta name="description" content="Diagnóstico executivo de presença digital, SEO, SEO Local e GEO para AMIL Goiânia e AMIL Ambiental." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#06110e;
-      --bg2:#0b1b17;
-      --card:rgba(255,255,255,.055);
+      --bg:#071410;
+      --bg2:#0a1c16;
+      --card:rgba(255,255,255,.05);
+      --card-hover:rgba(255,255,255,.08);
       --line:rgba(255,255,255,.10);
-      --text:#f4f8f6;
-      --muted:#a9bbb4;
-      --green:#39e58c;
-      --green2:#15b86a;
-      --yellow:#f6c85f;
-      --red:#ff7f7f;
-      --shadow:0 28px 80px rgba(0,0,0,.34);
+      --text:#f2f7f4;
+      --muted:#a3b7ae;
+      --muted-dim:#7d9089;
+      --green:#3fe28f;
+      --green2:#14a862;
+      --amber:#e7b968;
+      --clay:#e0805f;
+      --shadow:0 30px 90px rgba(0,0,0,.38);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
+    ::selection{background:rgba(63,226,143,.28);color:#fff}
     body{
       margin:0;
       color:var(--text);
       background:
-        radial-gradient(circle at 15% 15%, rgba(57,229,140,.12), transparent 32%),
-        radial-gradient(circle at 85% 10%, rgba(57,229,140,.08), transparent 28%),
+        radial-gradient(ellipse 900px 500px at 12% 8%, rgba(63,226,143,.13), transparent 55%),
+        radial-gradient(ellipse 700px 500px at 90% 4%, rgba(231,185,104,.07), transparent 50%),
         linear-gradient(180deg,var(--bg),#081712 40%,#05100d);
-      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      font-family:'Inter',ui-sans-serif,system-ui,-apple-system,sans-serif;
       line-height:1.55;
+      -webkit-font-smoothing:antialiased;
     }
     a{color:inherit;text-decoration:none}
     .wrap{width:min(1180px,calc(100% - 40px));margin:auto}
-    .nav{
-      position:sticky;top:0;z-index:50;
-      backdrop-filter:blur(18px);
-      background:rgba(6,17,14,.72);
-      border-bottom:1px solid var(--line);
-    }
-    .navin{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-    .brand{font-weight:800;letter-spacing:.08em;font-size:14px}
-    .badge{padding:8px 12px;border:1px solid rgba(57,229,140,.25);border-radius:999px;color:#caffdf;background:rgba(57,229,140,.08);font-size:12px}
+    .mono{font-family:'JetBrains Mono',ui-monospace,monospace}
+    .serif{font-family:'Fraunces',Georgia,serif}
+
+    .nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:rgba(7,20,16,.75);border-bottom:1px solid var(--line)}
+    .navin{height:70px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-weight:700;letter-spacing:.07em;font-size:13px}
+    .brand .mono{color:var(--green);margin-right:2px}
+    .badge{padding:8px 12px;border:1px solid rgba(63,226,143,.25);border-radius:999px;color:#c9ffe1;background:rgba(63,226,143,.08);font-size:12px}
     .nav-actions{display:flex;align-items:center;gap:10px}
-    .pdf-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:var(--green);color:#062014;font-size:12px;font-weight:850;box-shadow:0 8px 26px rgba(57,229,140,.16)}
+    .pdf-btn{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border-radius:999px;background:var(--green);color:#062014;font-size:12px;font-weight:700;box-shadow:0 8px 26px rgba(63,226,143,.16)}
     .pdf-btn:hover{transform:translateY(-1px)}
-    .hero{padding:86px 0 48px}
-    .eyebrow{color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.13em;font-size:12px}
-    h1{font-size:clamp(44px,7vw,92px);line-height:.95;margin:18px 0 24px;letter-spacing:-.055em;max-width:980px}
-    .lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted);max-width:850px}
-    .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;margin-top:50px}
-    .panel,.card{
-      border:1px solid var(--line);background:var(--card);border-radius:26px;box-shadow:var(--shadow)
-    }
-    .panel{padding:30px}
-    .domains{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .domain{padding:20px;border-radius:18px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
-    .domain strong{display:block;font-size:18px;margin-bottom:5px}
-    .domain span{color:var(--muted);font-size:14px}
-    .statbig{font-size:54px;font-weight:800;letter-spacing:-.06em}
-    .muted{color:var(--muted)}
-    section{padding:72px 0}
-    h2{font-size:clamp(34px,4vw,54px);line-height:1.03;letter-spacing:-.04em;margin:0 0 18px}
-    .section-copy{max-width:760px;color:var(--muted);font-size:18px}
-    .scores{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
-    .score{padding:22px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
-    .score-top{display:flex;justify-content:space-between;gap:20px;align-items:center}
-    .score-name{font-weight:700}
-    .score-val{font-size:28px;font-weight:800}
-    .bar{height:8px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden;margin:18px 0 12px}
+
+    .hero{padding:80px 0 44px}
+    .eyebrow{color:var(--green);font-weight:700;text-transform:uppercase;letter-spacing:.14em;font-size:11.5px;display:flex;align-items:center;gap:9px}
+    .eyebrow::before{content:"";width:16px;height:1px;background:var(--green)}
+    h1{font-family:'Fraunces',serif;font-weight:600;font-optical-sizing:auto;font-size:clamp(38px,6.2vw,78px);line-height:1.01;margin:20px 0 22px;letter-spacing:-.02em;max-width:920px}
+    .lead{font-size:clamp(17px,2vw,21px);color:var(--muted);max-width:760px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:22px;margin-top:48px;align-items:stretch}
+    .panel,.card{border:1px solid var(--line);background:var(--card);border-radius:24px;box-shadow:var(--shadow)}
+    .panel{padding:28px}
+    .domains{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .domain{padding:18px;border-radius:16px;background:rgba(255,255,255,.035);border:1px solid var(--line)}
+    .domain strong{display:block;font-size:16px;margin-bottom:5px;font-family:'JetBrains Mono',monospace;font-weight:500}
+    .domain span{color:var(--muted);font-size:13.5px}
+    .kicker{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+    .kicker span{padding:7px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:11.5px}
+
+    /* Radar diagnostic — signature element */
+    .radar-panel{display:flex;flex-direction:column;align-items:center;justify-content:center;padding:24px 20px}
+    .radar-title{align-self:flex-start;color:var(--muted);font-size:12.5px;text-transform:uppercase;letter-spacing:.1em;margin-bottom:6px}
+    .radar-sub{align-self:flex-start;font-size:13px;color:var(--muted-dim);margin-bottom:10px}
+    .radar-svg{width:100%;max-width:230px;height:auto}
+    .radar-grid{fill:none;stroke:rgba(255,255,255,.10)}
+    .radar-axis{stroke:rgba(255,255,255,.14)}
+    .radar-shape{fill:rgba(63,226,143,.16);stroke:var(--green);stroke-width:2}
+    .radar-dot{fill:var(--green)}
+    .radar-label{fill:var(--muted);font-size:9px;font-family:'JetBrains Mono',monospace}
+    .radar-legend{display:flex;justify-content:space-between;width:100%;max-width:230px;margin-top:14px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--muted)}
+    .radar-legend b{color:var(--green);font-weight:600}
+
+    section{padding:68px 0}
+    .eyebrow + h2{margin-top:0}
+    h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(30px,3.6vw,46px);line-height:1.06;letter-spacing:-.015em;margin:16px 0 16px}
+    h3{font-family:'Fraunces',serif;font-weight:600}
+    .section-copy{max-width:740px;color:var(--muted);font-size:17px}
+
+    .scores{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px}
+    .score{padding:20px;border-radius:20px;border:1px solid var(--line);background:rgba(255,255,255,.04)}
+    .score-top{display:flex;justify-content:space-between;gap:16px;align-items:center}
+    .score-name{font-weight:600;font-size:14.5px}
+    .score-val{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700}
+    .bar{height:7px;background:rgba(255,255,255,.08);border-radius:20px;overflow:hidden;margin:16px 0 11px}
     .bar i{display:block;height:100%;width:var(--w);background:linear-gradient(90deg,var(--green2),var(--green));border-radius:20px}
-    .score small{color:var(--muted)}
-    .issues{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}
-    .issue{padding:26px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:22px}
-    .issue .num{font-size:12px;color:var(--green);font-weight:800;letter-spacing:.12em}
-    .issue h3{margin:10px 0 8px;font-size:22px}
-    .issue p{margin:0;color:var(--muted)}
-    .impact{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
-    .impact .card{padding:28px}
-    .impact strong{font-size:20px}
-    .pill{display:inline-flex;margin-top:14px;padding:7px 10px;border-radius:999px;font-size:12px;background:rgba(246,200,95,.1);color:#ffe19b;border:1px solid rgba(246,200,95,.2)}
-    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:38px;align-items:center}
-    .flow div{min-height:120px;padding:22px;border-radius:20px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,.035);font-weight:800}
-    .flow div:not(:last-child)::after{content:"→";position:absolute}
-    .positioning{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
-    .positioning .card{padding:30px}
-    .positioning h3{font-size:28px;margin:0 0 8px}
-    .positioning ul{padding-left:18px;color:var(--muted);margin:18px 0 0}
-    .proposal{
-      padding:40px;
-      background:linear-gradient(145deg,rgba(57,229,140,.12),rgba(255,255,255,.04));
-      border:1px solid rgba(57,229,140,.22);
-      border-radius:30px;
-      box-shadow:var(--shadow);
-    }
-    .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
-    .price{padding:28px;border-radius:24px;border:1px solid var(--line);background:rgba(0,0,0,.16)}
-    .price label{display:block;color:var(--muted);font-size:14px;margin-bottom:8px}
-    .price strong{display:block;font-size:46px;letter-spacing:-.05em}
-    .price span{color:var(--muted)}
-    .note{margin-top:24px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted)}
-    .cta{display:inline-flex;margin-top:28px;padding:15px 22px;border-radius:14px;background:var(--green);color:#062014;font-weight:850;box-shadow:0 10px 35px rgba(57,229,140,.18)}
-    footer{padding:40px 0 70px;color:#789087;font-size:13px}
-    .kicker{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
-    .kicker span{padding:8px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted);font-size:12px}
+    .score small{color:var(--muted);font-size:13px}
+
+    /* GEO explainer */
+    .geo-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:34px}
+    .geo-old,.geo-new{padding:26px;border-radius:22px;border:1px solid var(--line)}
+    .geo-old{background:rgba(255,255,255,.03)}
+    .geo-new{background:linear-gradient(160deg,rgba(63,226,143,.09),rgba(255,255,255,.03));border-color:rgba(63,226,143,.2)}
+    .geo-tag{font-family:'JetBrains Mono',monospace;font-size:11px;letter-spacing:.06em;color:var(--muted-dim);text-transform:uppercase}
+    .geo-new .geo-tag{color:var(--green)}
+    .geo-old h3,.geo-new h3{font-size:20px;margin:8px 0 12px}
+    .geo-old p,.geo-new p{margin:0 0 10px;color:var(--muted);font-size:14.5px}
+    .geo-old ul,.geo-new ul{margin:12px 0 0;padding-left:18px;color:var(--muted);font-size:14px}
+    .geo-old li,.geo-new li{margin-bottom:6px}
+
+    .issues{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:32px}
+    .issue{padding:24px;border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:20px;position:relative}
+    .issue-top{display:flex;justify-content:space-between;align-items:flex-start;gap:10px}
+    .issue .tag{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.05em;padding:4px 8px;border-radius:999px;white-space:nowrap}
+    .tag.alto{background:rgba(224,128,95,.14);color:var(--clay);border:1px solid rgba(224,128,95,.28)}
+    .tag.medio{background:rgba(231,185,104,.14);color:var(--amber);border:1px solid rgba(231,185,104,.28)}
+    .issue h3{margin:12px 0 8px;font-size:20px;font-weight:600}
+    .issue p{margin:0;color:var(--muted);font-size:14.5px}
+
+    .impact{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:32px}
+    .impact .card{padding:26px}
+    .impact strong{font-size:18px;font-family:'Fraunces',serif;font-weight:600}
+    .pill{display:inline-flex;margin-top:14px;padding:6px 10px;border-radius:999px;font-size:11.5px;background:rgba(231,185,104,.1);color:var(--amber);border:1px solid rgba(231,185,104,.2)}
+
+    .flow{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:36px;align-items:center}
+    .flow div{min-height:104px;padding:18px;border-radius:18px;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;background:rgba(255,255,255,.035);font-weight:600;font-size:14.5px}
+
+    .positioning{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+    .positioning .card{padding:28px}
+    .positioning h3{font-size:24px;margin:0 0 8px}
+    .positioning ul{padding-left:18px;color:var(--muted);margin:16px 0 0;font-size:14.5px}
+
+    /* Methodology */
+    .method{margin-top:32px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .method div{padding:20px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .method .step-n{font-family:'JetBrains Mono',monospace;color:var(--green);font-size:11px;letter-spacing:.06em}
+    .method h3{font-size:16px;margin:10px 0 6px}
+    .method p{margin:0;color:var(--muted);font-size:13.5px}
+
+    /* Comparative table */
+    .compare{margin-top:32px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:rgba(255,255,255,.03)}
+    .compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:0}
+    .compare-row > div{padding:16px 20px;font-size:14.5px;border-top:1px solid var(--line)}
+    .compare-row:first-child > div{border-top:none;font-family:'JetBrains Mono',monospace;font-size:11.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted-dim);padding-bottom:12px}
+    .compare-row > div:first-child{color:var(--text);font-weight:500}
+    .compare-row > div:nth-child(2){color:var(--muted)}
+    .compare-row > div:nth-child(3){color:var(--green);font-weight:600}
+
+    /* Roadmap */
+    .roadmap{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .rm-card{padding:26px;border-radius:22px;border:1px solid var(--line);background:rgba(255,255,255,.035);position:relative}
+    .rm-phase{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--green);letter-spacing:.06em}
+    .rm-card h3{font-size:19px;margin:10px 0 4px}
+    .rm-time{color:var(--muted-dim);font-size:12.5px;margin-bottom:12px}
+    .rm-card ul{margin:0;padding-left:16px;color:var(--muted);font-size:13.5px}
+    .rm-card li{margin-bottom:5px}
+
+    .proposal{padding:38px;background:linear-gradient(150deg,rgba(63,226,143,.12),rgba(255,255,255,.04));border:1px solid rgba(63,226,143,.22);border-radius:28px;box-shadow:var(--shadow)}
+    .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+    .price{padding:26px;border-radius:22px;border:1px solid var(--line);background:rgba(0,0,0,.18)}
+    .price label{display:block;color:var(--muted);font-size:13px;margin-bottom:8px}
+    .price strong{display:block;font-family:'JetBrains Mono',monospace;font-size:38px;letter-spacing:-.02em;font-weight:700}
+    .price span{color:var(--muted);font-size:13.5px}
+    .note{margin-top:22px;padding-top:20px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+    .cta{display:inline-flex;margin-top:26px;padding:14px 20px;border-radius:14px;background:var(--green);color:#062014;font-weight:700;box-shadow:0 10px 35px rgba(63,226,143,.18)}
+
+    /* FAQ */
+    .faq{margin-top:32px;display:grid;gap:1px;border:1px solid var(--line);border-radius:20px;overflow:hidden;background:var(--line)}
+    .faq details{background:rgba(9,22,17,.9);padding:20px 22px}
+    .faq summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";color:var(--green);font-family:'JetBrains Mono',monospace;font-size:18px;flex-shrink:0}
+    .faq details[open] summary::after{content:"–"}
+    .faq p{margin:12px 0 0;color:var(--muted);font-size:14.5px;max-width:760px}
+
+    footer{padding:36px 0 64px;color:#6f857c;font-size:13px}
+
     @media(max-width:900px){
-      .hero-grid,.scores,.issues,.impact,.positioning,.price-grid{grid-template-columns:1fr 1fr}
+      .hero-grid,.scores,.issues,.impact,.positioning,.price-grid,.geo-grid,.method,.roadmap{grid-template-columns:1fr 1fr}
       .flow{grid-template-columns:1fr}
+      .compare-row{grid-template-columns:1.2fr 1fr 1fr}
     }
-    @media print{.nav{display:none}.cta,.pdf-btn{display:none!important}section{break-inside:avoid}.hero{padding-top:34px}body{background:#06110e!important}}
+    @media print{.nav{display:none}.cta,.pdf-btn{display:none!important}section{break-inside:avoid}.hero{padding-top:30px}body{background:#06110e!important}}
     @media(max-width:640px){
       .wrap{width:min(100% - 24px,1180px)}
-      .navin{height:62px}
-      .hero{padding-top:58px}
-      .hero-grid,.domains,.scores,.issues,.impact,.positioning,.price-grid{grid-template-columns:1fr}
-      .panel{padding:22px}
-      .proposal{padding:24px}
-      .price strong{font-size:38px}
+      .navin{height:60px}
+      .hero{padding-top:52px}
+      .hero-grid,.domains,.scores,.issues,.impact,.positioning,.price-grid,.geo-grid,.method,.roadmap{grid-template-columns:1fr}
+      .compare-row{grid-template-columns:1fr;gap:2px}
+      .compare-row > div{padding:10px 16px}
+      .compare-row > div:first-child{padding-top:16px;font-weight:700}
+      .panel{padding:20px}
+      .proposal{padding:22px}
+      .price strong{font-size:32px}
     }
   </style>
 </head>
 <body>
   <div class="nav">
     <div class="wrap navin">
-      <div class="brand">DIAGNÓSTICO DIGITAL · AMIL</div>
+      <div class="brand"><span class="mono">◆</span>DIAGNÓSTICO DIGITAL · AMIL</div>
       <div class="nav-actions"><div class="badge">SEO + GEO · 2026</div><a class="pdf-btn" href="amil-diagnostico-seo-geo.pdf" download aria-label="Baixar diagnóstico em PDF">↓ Baixar PDF</a></div>
     </div>
   </div>
@@ -134,7 +208,7 @@
       <div class="wrap">
         <div class="eyebrow">Diagnóstico executivo</div>
         <h1>Visibilidade orgânica, presença local e posicionamento em mecanismos de IA.</h1>
-        <p class="lead">Análise resumida de oportunidades e lacunas digitais identificadas nos domínios AMIL Goiânia e AMIL Ambiental, com foco em busca, descoberta local e presença em novas experiências de pesquisa com inteligência artificial.</p>
+        <p class="lead">Análise de oportunidades e lacunas digitais identificadas nos domínios AMIL Goiânia e AMIL Ambiental — cobrindo busca tradicional, descoberta local e presença em novas experiências de pesquisa com inteligência artificial.</p>
 
         <div class="hero-grid">
           <div class="panel">
@@ -146,10 +220,27 @@
               <span>SEO Técnico</span><span>SEO Local</span><span>Conteúdo</span><span>GEO / IA</span><span>Autoridade Digital</span>
             </div>
           </div>
-          <div class="panel">
-            <div class="muted">Potencial identificado</div>
-            <div class="statbig">ALTO</div>
-            <p class="muted">Os dois domínios apresentam oportunidades relevantes de ganho de visibilidade e fortalecimento de posicionamento.</p>
+
+          <div class="panel radar-panel">
+            <div class="radar-title">Índice de maturidade digital</div>
+            <div class="radar-sub">Leitura visual — não é métrica oficial do Google</div>
+            <svg class="radar-svg" viewBox="0 0 260 260">
+              <polygon class="radar-grid" points="130,55 205,130 130,205 55,130"/>
+              <polygon class="radar-grid" points="130,80 180,130 130,180 80,130"/>
+              <polygon class="radar-grid" points="130,105 155,130 130,155 105,130"/>
+              <line class="radar-axis" x1="130" y1="30" x2="130" y2="230"/>
+              <line class="radar-axis" x1="30" y1="130" x2="230" y2="130"/>
+              <polygon class="radar-shape" points="130,88 189,130 130,157 92,130"/>
+              <circle class="radar-dot" cx="130" cy="88" r="3.5"/>
+              <circle class="radar-dot" cx="189" cy="130" r="3.5"/>
+              <circle class="radar-dot" cx="130" cy="157" r="3.5"/>
+              <circle class="radar-dot" cx="92" cy="130" r="3.5"/>
+              <text class="radar-label" x="130" y="24" text-anchor="middle">TÉCNICO 58</text>
+              <text class="radar-label" x="236" y="134" text-anchor="start">LOCAL 72</text>
+              <text class="radar-label" x="130" y="246" text-anchor="middle">CONTEÚDO 54</text>
+              <text class="radar-label" x="24" y="134" text-anchor="end">GEO/IA 39</text>
+            </svg>
+            <div class="radar-legend"><span>Potencial identificado</span><b>ALTO</b></div>
           </div>
         </div>
       </div>
@@ -184,17 +275,39 @@
 
     <section>
       <div class="wrap">
+        <div class="eyebrow">Contexto</div>
+        <h2>O que é GEO — e por que já não basta otimizar só para o Google.</h2>
+        <p class="section-copy">Generative Engine Optimization é a disciplina de estruturar conteúdo e sinais de entidade para que sistemas como ChatGPT, Perplexity, Gemini e as respostas geradas por IA do próprio Google citem e recomendem a marca — não apenas listem o site em uma página de resultados.</p>
+        <div class="geo-grid">
+          <div class="geo-old">
+            <span class="geo-tag">Busca tradicional</span>
+            <h3>Ser encontrado</h3>
+            <p>O usuário digita uma consulta, recebe uma lista de links azuis e decide qual clicar com base em título, descrição e reputação da URL.</p>
+            <ul><li>Ranqueamento por palavra-chave</li><li>Cliques e tráfego para o site</li><li>Disputa por posição no ranking</li></ul>
+          </div>
+          <div class="geo-new">
+            <span class="geo-tag">Busca generativa</span>
+            <h3>Ser citado</h3>
+            <p>O usuário faz uma pergunta e recebe uma resposta pronta, sintetizada a partir de poucas fontes consideradas confiáveis o suficiente para citar.</p>
+            <ul><li>Estrutura semântica e dados claros</li><li>Consistência de entidade entre canais</li><li>Disputa por ser a fonte citada</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
         <div class="eyebrow">Diagnóstico resumido</div>
         <h2>O que ainda não está suficientemente estruturado.</h2>
         <div class="issues">
-          <div class="issue"><div class="num">01</div><h3>Indexação e rastreabilidade</h3><p>Existem pontos técnicos e URLs que requerem revisão para garantir que os motores de busca encontrem, interpretem e priorizem corretamente as páginas relevantes.</p></div>
-          <div class="issue"><div class="num">02</div><h3>Arquitetura de conteúdo</h3><p>A estrutura atual não cobre de forma ampla todas as intenções de busca ligadas a serviços, localização, problemas e soluções procuradas pelos usuários.</p></div>
-          <div class="issue"><div class="num">03</div><h3>Metadados e sinais semânticos</h3><p>Há necessidade de padronização e validação de informações utilizadas por buscadores, redes sociais e sistemas de interpretação semântica.</p></div>
-          <div class="issue"><div class="num">04</div><h3>SEO Local</h3><p>A presença local é um ativo forte, mas ainda pode ser mais bem conectada ao site, à marca e às regiões efetivamente atendidas.</p></div>
-          <div class="issue"><div class="num">05</div><h3>Consistência da entidade AMIL</h3><p>Informações corporativas e sinais digitais precisam estar mais consistentes entre propriedades, canais e domínios para reduzir ambiguidade.</p></div>
-          <div class="issue"><div class="num">06</div><h3>GEO e mecanismos de IA</h3><p>Os sites ainda não apresentam uma estrutura suficientemente forte para maximizar compreensão, citação e recomendação por experiências de busca com IA.</p></div>
-          <div class="issue"><div class="num">07</div><h3>Autoridade e confiança</h3><p>Existe espaço para reforçar sinais de experiência, legitimidade, relevância e confiança da marca nos ambientes de busca.</p></div>
-          <div class="issue"><div class="num">08</div><h3>Separação estratégica dos domínios</h3><p>Os dois sites precisam assumir papéis claros para evitar sobreposição e transformar a presença digital em ativos complementares, e não concorrentes.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag alto">Alto impacto</span></div><h3>Indexação e rastreabilidade</h3><p>Existem pontos técnicos e URLs que requerem revisão para garantir que os motores de busca encontrem, interpretem e priorizem corretamente as páginas relevantes.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag alto">Alto impacto</span></div><h3>Arquitetura de conteúdo</h3><p>A estrutura atual não cobre de forma ampla todas as intenções de busca ligadas a serviços, localização, problemas e soluções procuradas pelos usuários.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag medio">Médio impacto</span></div><h3>Metadados e sinais semânticos</h3><p>Há necessidade de padronização e validação de informações utilizadas por buscadores, redes sociais e sistemas de interpretação semântica.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag medio">Médio impacto</span></div><h3>SEO Local</h3><p>A presença local é um ativo forte, mas ainda pode ser mais bem conectada ao site, à marca e às regiões efetivamente atendidas.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag alto">Alto impacto</span></div><h3>Consistência da entidade AMIL</h3><p>Informações corporativas e sinais digitais precisam estar mais consistentes entre propriedades, canais e domínios para reduzir ambiguidade.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag alto">Alto impacto</span></div><h3>GEO e mecanismos de IA</h3><p>Os sites ainda não apresentam uma estrutura suficientemente forte para maximizar compreensão, citação e recomendação por experiências de busca com IA.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag medio">Médio impacto</span></div><h3>Autoridade e confiança</h3><p>Existe espaço para reforçar sinais de experiência, legitimidade, relevância e confiança da marca nos ambientes de busca.</p></div>
+          <div class="issue"><div class="issue-top"><span class="tag medio">Médio impacto</span></div><h3>Separação estratégica dos domínios</h3><p>Os dois sites precisam assumir papéis claros para evitar sobreposição e transformar a presença digital em ativos complementares, e não concorrentes.</p></div>
         </div>
       </div>
     </section>
@@ -202,12 +315,12 @@
     <section>
       <div class="wrap">
         <div class="eyebrow">Impacto</div>
-        <h2>O problema não é apenas “aparecer no Google”.</h2>
+        <h2>O problema não é apenas "aparecer no Google".</h2>
         <p class="section-copy">A busca está fragmentada entre mecanismos tradicionais, mapas, avaliações, assistentes e respostas geradas por inteligência artificial.</p>
         <div class="impact">
-          <div class="card"><strong>Menor cobertura de buscas</strong><p class="muted">O site deixa de disputar consultas comerciais e informacionais com potencial de geração de demanda.</p><span class="pill">Perda de oportunidade</span></div>
-          <div class="card"><strong>Menor clareza para algoritmos</strong><p class="muted">Quando a entidade, serviços e áreas de atuação não estão estruturados de forma consistente, a compreensão algorítmica fica limitada.</p><span class="pill">Baixa interpretação</span></div>
-          <div class="card"><strong>Dependência maior de mídia paga</strong><p class="muted">Sem fortalecimento orgânico contínuo, a aquisição tende a depender mais de investimento recorrente em anúncios.</p><span class="pill">Maior CAC potencial</span></div>
+          <div class="card"><strong>Menor cobertura de buscas</strong><p class="muted" style="color:var(--muted);font-size:14.5px;margin:10px 0 0">O site deixa de disputar consultas comerciais e informacionais com potencial de geração de demanda.</p><span class="pill">Perda de oportunidade</span></div>
+          <div class="card"><strong>Menor clareza para algoritmos</strong><p class="muted" style="color:var(--muted);font-size:14.5px;margin:10px 0 0">Quando a entidade, serviços e áreas de atuação não estão estruturados de forma consistente, a compreensão algorítmica fica limitada.</p><span class="pill">Baixa interpretação</span></div>
+          <div class="card"><strong>Dependência maior de mídia paga</strong><p class="muted" style="color:var(--muted);font-size:14.5px;margin:10px 0 0">Sem fortalecimento orgânico contínuo, a aquisição tende a depender mais de investimento recorrente em anúncios.</p><span class="pill">Maior CAC potencial</span></div>
         </div>
       </div>
     </section>
@@ -224,26 +337,78 @@
 
     <section>
       <div class="wrap">
+        <div class="eyebrow">Hoje vs. potencial</div>
+        <h2>O que muda com a estruturação de SEO + GEO.</h2>
+        <p class="section-copy">Leitura qualitativa do ponto de partida frente ao cenário buscado ao final da primeira fase de implementação.</p>
+        <div class="compare">
+          <div class="compare-row"><div>Dimensão</div><div>Cenário atual</div><div>Cenário buscado</div></div>
+          <div class="compare-row"><div>Cobertura de buscas</div><div>Concentrada em poucos termos de marca</div><div>Ampliada para intenção comercial e local</div></div>
+          <div class="compare-row"><div>Presença em IA generativa</div><div>Pouco ou nenhum sinal estruturado</div><div>Entidade citável em respostas de IA</div></div>
+          <div class="compare-row"><div>Papel dos domínios</div><div>Sobreposição entre os dois sites</div><div>Funções complementares e claras</div></div>
+          <div class="compare-row"><div>Dependência de mídia paga</div><div>Alta, sem reforço orgânico</div><div>Reduzida por tráfego orgânico contínuo</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
         <div class="eyebrow">Direcionamento estratégico</div>
         <h2>Dois domínios. Dois papéis claros.</h2>
         <div class="positioning">
           <div class="card">
             <h3>AMIL Goiânia</h3>
-            <p class="muted">Vocação para intenção local, atendimento, serviços e pesquisas comerciais de alta urgência.</p>
+            <p class="muted" style="color:var(--muted);font-size:14.5px">Vocação para intenção local, atendimento, serviços e pesquisas comerciais de alta urgência.</p>
             <ul><li>Busca local</li><li>Serviços</li><li>Regiões atendidas</li><li>Conversão</li></ul>
           </div>
           <div class="card">
             <h3>AMIL Ambiental</h3>
-            <p class="muted">Vocação institucional, ambiental, industrial e corporativa, com foco em autoridade temática e presença B2B.</p>
+            <p class="muted" style="color:var(--muted);font-size:14.5px">Vocação institucional, ambiental, industrial e corporativa, com foco em autoridade temática e presença B2B.</p>
             <ul><li>Autoridade</li><li>Soluções ambientais</li><li>Mercado corporativo</li><li>Relevância técnica</li></ul>
           </div>
         </div>
       </div>
     </section>
 
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Metodologia</div>
+        <h2>Como este diagnóstico foi construído.</h2>
+        <p class="section-copy">A leitura combina inspeção técnica dos dois domínios, mapeamento de presença local e verificação de estrutura semântica frente aos critérios que motores tradicionais e mecanismos de IA usam para entender uma marca.</p>
+        <div class="method">
+          <div><div class="step-n">01 · TÉCNICO</div><h3>Rastreabilidade</h3><p>Indexação, performance, estrutura de URLs e acesso dos robôs de busca.</p></div>
+          <div><div class="step-n">02 · LOCAL</div><h3>Presença geográfica</h3><p>Perfis, consistência de dados (NAP) e cobertura das regiões atendidas.</p></div>
+          <div><div class="step-n">03 · SEMÂNTICO</div><h3>Estrutura de dados</h3><p>Metadados, marcação e sinais que descrevem a entidade AMIL para máquinas.</p></div>
+          <div><div class="step-n">04 · GEO</div><h3>Citabilidade em IA</h3><p>Clareza e confiabilidade do conteúdo para ser referenciado por respostas geradas por IA.</p></div>
+        </div>
+      </div>
+    </section>
+
     <section id="proposta">
       <div class="wrap">
-        <div class="proposal">
+        <div class="eyebrow">Roadmap de implementação</div>
+        <h2>Como a evolução acontece, em três fases.</h2>
+        <div class="roadmap">
+          <div class="rm-card">
+            <div class="rm-phase">FASE 1</div>
+            <h3>Fundação técnica</h3>
+            <div class="rm-time">Primeiras semanas</div>
+            <ul><li>Correção de indexação e rastreabilidade</li><li>Padronização de metadados e dados estruturados</li><li>Consistência da entidade AMIL entre canais</li></ul>
+          </div>
+          <div class="rm-card">
+            <div class="rm-phase">FASE 2</div>
+            <h3>Conteúdo & autoridade</h3>
+            <div class="rm-time">Meses seguintes</div>
+            <ul><li>Arquitetura de conteúdo por intenção de busca</li><li>Reforço de SEO Local e regiões atendidas</li><li>Sinais de experiência e confiança da marca</li></ul>
+          </div>
+          <div class="rm-card">
+            <div class="rm-phase">FASE 3</div>
+            <h3>GEO & expansão</h3>
+            <div class="rm-time">Gestão contínua</div>
+            <ul><li>Estruturação para citação em mecanismos de IA</li><li>Acompanhamento de desempenho orgânico</li><li>Evolução contínua de posicionamento</li></ul>
+          </div>
+        </div>
+
+        <div class="proposal" style="margin-top:36px">
           <div class="eyebrow">Proposta comercial</div>
           <h2>Assumir a evolução de SEO + GEO dos dois domínios.</h2>
           <p class="section-copy">Projeto voltado à estruturação inicial, gestão contínua, acompanhamento de desempenho e evolução do posicionamento orgânico da marca.</p>
@@ -258,6 +423,31 @@
           </div>
 
           <a class="cta" href="amil-diagnostico-seo-geo.pdf" download>Baixar proposta em PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="eyebrow">Perguntas frequentes</div>
+        <h2>Antes de decidir.</h2>
+        <div class="faq">
+          <details open>
+            <summary>Existe garantia de posição no Google?</summary>
+            <p>Não. Nenhum fornecedor sério pode garantir posição específica em mecanismos de busca — o algoritmo é dinâmico e controlado pelo Google. O trabalho garante estruturação técnica, cobertura de conteúdo e consistência de sinais; o resultado é consequência dessas variáveis ao longo do tempo.</p>
+          </details>
+          <details>
+            <summary>Qual a diferença prática entre SEO e GEO no dia a dia do projeto?</summary>
+            <p>SEO trabalha para o site ranquear e receber cliques. GEO trabalha para que a marca seja compreendida e citada por assistentes de IA, mesmo quando o usuário nunca chega a clicar em um link. As duas frentes compartilham boa parte da base técnica e semântica, mas exigem ajustes específicos de estrutura e conteúdo.</p>
+          </details>
+          <details>
+            <summary>Em quanto tempo aparecem resultados?</summary>
+            <p>A fundação técnica costuma ser concluída nas primeiras semanas. Ganhos de visibilidade orgânica e presença em IA são cumulativos e geralmente começam a ficar perceptíveis a partir do terceiro mês, com evolução contínua na gestão mensal.</p>
+          </details>
+          <details>
+            <summary>Por que manter dois domínios em vez de unificar em um só?</summary>
+            <p>Porque atendem intenções de busca diferentes — uma comercial e local, outra institucional e corporativa. Unificados, os sites competiriam entre si por relevância; separados com papéis claros, se tornam ativos complementares.</p>
+          </details>
         </div>
       </div>
     </section>
